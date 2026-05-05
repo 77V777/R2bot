@@ -1,0 +1,144 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXProject section */
+		3E7D1E991F6A2B3E00B1E8F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1450;
+			};
+			children = (
+				3E7D1E9A1F6A2B3E00B1E8F6 /* R2CameraUpload */,
+			);
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3E7D1E9B1F6A2B3E00B1E8F6;
+			productRefGroup = 3E7D1EA01F6A2B3E00B1E8F6;
+			projectDirPath = "";
+			projectRoots = (
+			);
+			targets = (
+				3E7D1E9A1F6A2B3E00B1E8F6 /* R2CameraUpload */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXNativeTarget section */
+		3E7D1E9A1F6A2B3E00B1E8F6 /* R2CameraUpload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E7D1E9C1F6A2B3E00B1E8F6 /* Build configuration list for PBXNativeTarget "R2CameraUpload" */;
+			buildPhases = (
+				3E7D1E9D1F6A2B3E00B1E8F6 /* Sources */,
+				3E7D1E9E1F6A2B3E00B1E8F6 /* Frameworks */,
+				3E7D1E9F1F6A2B3E00B1E8F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "R2CameraUpload";
+			productName = "R2CameraUpload";
+			productReference = 3E7D1EA11F6A2B3E00B1E8F6 /* R2CameraUpload.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E7D1E9D1F6A2B3E00B1E8F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7D1EA21F6A2B3E00B1E8F6 /* R2CameraUploadApp.swift in Sources */,
+				3E7D1EA31F6A2B3E00B1E8F6 /* ContentView.swift in Sources */,
+				3E7D1EA41F6A2B3E00B1E8F6 /* ImagePicker.swift in Sources */,
+				3E7D1EA51F6A2B3E00B1E8F6 /* NetworkManager.swift in Sources */,
+				3E7D1EA61F6A2B3E00B1E8F6 /* PhotoMonitor.swift in Sources */,
+				3E7D1EA71F6A2B3E00B1E8F6 /* UploadQueue.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E7D1E9E1F6A2B3E00B1E8F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E7D1E9F1F6A2B3E00B1E8F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7D1EA81F6A2B3E00B1E8F6 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E7D1E9B1F6A2B3E00B1E8F6 = {
+			isa = PBXGroup;
+			children = (
+				3E7D1EA01F6A2B3E00B1E8F6 /* Products */,
+				3E7D1EA91F6A2B3E00B1E8F6 /* R2CameraUpload */,
+				3E7D1EA81F6A2B3E00B1E8F6 /* Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		3E7D1EA91F6A2B3E00B1E8F6 = {
+			isa = PBXGroup;
+			children = (
+				3E7D1EA21F6A2B3E00B1E8F6 /* R2CameraUploadApp.swift */,
+				3E7D1EA31F6A2B3E00B1E8F6 /* ContentView.swift */,
+				3E7D1EA41F6A2B3E00B1E8F6 /* ImagePicker.swift */,
+				3E7D1EA51F6A2B3E00B1E8F6 /* NetworkManager.swift */,
+				3E7D1EA61F6A2B3E00B1E8F6 /* PhotoMonitor.swift */,
+				3E7D1EA71F6A2B3E00B1E8F6 /* UploadQueue.swift */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXFileReference section */
+		3E7D1EA11F6A2B3E00B1E8F6 /* R2CameraUpload.app */ = { isa = PBXFileReference; explicitFileType = "wrapper.application"; path = "R2CameraUpload.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E7D1EA21F6A2B3E00B1E8F6 /* R2CameraUploadApp.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R2CameraUploadApp.swift; sourceTree = "<group>"; };
+		3E7D1EA31F6A2B3E00B1E8F6 /* ContentView.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3E7D1EA41F6A2B3E00B1E8F6 /* ImagePicker.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		3E7D1EA51F6A2B3E00B1E8F6 /* NetworkManager.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3E7D1EA61F6A2B3E00B1E8F6 /* PhotoMonitor.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMonitor.swift; sourceTree = "<group>"; };
+		3E7D1EA71F6A2B3E00B1E8F6 /* UploadQueue.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadQueue.swift; sourceTree = "<group>"; };
+		3E7D1EA81F6A2B3E00B1E8F6 /* Info.plist */ = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E7D1EA01F6A2B3E00B1E8F6 /* Products */ = { isa = PBXGroup; children = ( ); sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin XCBuildConfiguration section */
+		3E7D1E9C1F6A2B3E00B1E8F6 /* Build configuration list for PBXNativeTarget "R2CameraUpload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E7D1EA91F6A2B3E00B1E8F6 /* Debug */,
+				3E7D1EAA1F6A2B3E00B1E8F6 /* Release */,
+			);
+			targets = (
+				3E7D1E9A1F6A2B3E00B1E8F6,
+			);
+		};
+		3E7D1EA91F6A2B3E00B1E8F6 /* Debug */ = { isa = XCBuildConfiguration; buildSettings = { PRODUCT_BUNDLE_IDENTIFIER = "com.example.R2CameraUpload"; }; name = Debug; };
+		3E7D1EAA1F6A2B3E00B1E8F6 /* Release */ = { isa = XCBuildConfiguration; buildSettings = { PRODUCT_BUNDLE_IDENTIFIER = "com.example.R2CameraUpload"; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+	};
+	rootObject = 3E7D1E991F6A2B3E00B1E8F6 /* Project object */;
+}

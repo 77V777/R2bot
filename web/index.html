@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>R2 Bucket Browser</title>
+  <style>
+    body{font-family: Arial, Helvetica, sans-serif; padding:20px}
+    .item{display:inline-block;margin:6px;border:1px solid #ddd;padding:6px;width:180px;vertical-align:top}
+    .item img{width:100%;height:120px;object-fit:cover;background:#f6f6f6}
+    .meta{font-size:12px;color:#666}
+    button{margin-top:6px}
+  </style>
+</head>
+<body>
+  <h2>R2 Bucket 浏览器</h2>
+  <div>
+    <label>Presign server: <input id="server" style="width:320px" value="http://localhost:3000"/></label>
+    <button id="refresh">刷新</button>
+  </div>
+  <div id="list" style="margin-top:12px"></div>
+
+  <script>
+    async function listObjects() {
+      const srv = document.getElementById('server').value.replace(/\/$/, '')
+      const res = await fetch(srv + '/list-objects')
+      if (!res.ok) return alert('list failed: ' + res.status)
+      const data = await res.json()
+      const list = document.getElementById('list')
+      list.innerHTML = ''
+      for (const obj of data.objects) {
+        const div = document.createElement('div')
+        div.className = 'item'
+        const img = document.createElement('img')
+        img.src = ''
+        img.alt = obj.Key
+        const meta = document.createElement('div')
+        meta.className = 'meta'
+        meta.textContent = obj.Key + ' (' + (obj.Size||0) + ' bytes)'
+        const btn = document.createElement('button')
+        btn.textContent = 'Preview'
+        btn.onclick = async () => {
+          try {
+            btn.disabled = true
+            const r2 = await fetch(srv + '/get-presigned-get?key=' + encodeURIComponent(obj.Key))
+            const j = await r2.json()
+            if (j.url) img.src = j.url
+            else alert('no url')
+          } catch (e) { alert('error: ' + e) }
+          btn.disabled = false
+        }
+        div.appendChild(img)
+        div.appendChild(meta)
+        div.appendChild(btn)
+        list.appendChild(div)
+      }
+    }
+    document.getElementById('refresh').addEventListener('click', listObjects)
+    // auto-load
+    listObjects()
+  </script>
+</body>
+</html>

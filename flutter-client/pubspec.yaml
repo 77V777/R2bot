@@ -1,0 +1,17 @@
+name: r2_autoupload_client
+description: A simple Flutter client to take photo and upload to Cloudflare R2 via presigned URL
+publish_to: 'none'
+version: 0.0.1
+environment:
+  sdk: '>=2.17.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  image_picker: ^0.8.7
+  http: ^0.13.6
+  dio: ^5.1.2
+  mime: ^1.0.2
+
+flutter:
+  uses-material-design: true
