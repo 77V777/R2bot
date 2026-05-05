@@ -1,0 +1,43 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  node-and-python-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install server dependencies
+        working-directory: server
+        run: |
+          npm ci
+
+      - name: Run server start check (non-blocking)
+        working-directory: server
+        run: |
+          # Try to run index.js quickly to catch syntax errors; background it and kill after 5s
+          node index.js & PID=$!; sleep 5; kill $PID || true
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Python deps
+        run: |
+          pip install requests
+
+      - name: Python script smoke test
+        run: |
+          python scripts/presign_uploader.py --help
